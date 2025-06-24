@@ -1,0 +1,27 @@
+collection:
+  system:
+    interval: 1
+    metrics:
+      - cpu
+      - memory
+      - io
+      - network
+  java:
+    interval: 1
+    metrics:
+      - threads
+      - locks
+      - gc
+      - safepoint
+
+thresholds:
+  cpu_high: 80
+  memory_high: 90
+  io_wait_high: 10
+  lock_contention_high: 1000
+
+plotting:
+  style: seaborn
+  figure_size: [15, 10]
+  dpi: 100
+
