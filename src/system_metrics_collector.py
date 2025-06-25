@@ -178,7 +178,7 @@ def main():
     config = load_config()
     parser = argparse.ArgumentParser(description='Collect system metrics')
     parser.add_argument('--output-dir', default='metrics_data')
-    parser.add_argument('--duration', default='metrics_data')
+    parser.add_argument('--duration', default=10, type=int)
     parser.add_argument('--interval', type=float,
                         default=config['collection']['system']['interval'])
     args = parser.parse_args()
